@@ -58,7 +58,14 @@
         height: auto;
         display: block;
         margin: 1rem auto;
-        border-radius: 0; /* changed to rectangle */
+        border-radius: 0; /* default rectangle shape for all images */
+    }
+    .profile-photo {
+        border-radius: 50% / 35%; /* oval shape for profile photo */
+        width: 200px; /* adjust as needed */
+        height: auto;
+        display: block;
+        margin: 1rem auto;
     }
 </style>
 </head>
@@ -79,7 +86,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <img src="photo.jpg" alt="Hema A - Profile Photo">
+        <img src="photo.jpg" alt="Hema A - Profile Photo" class="profile-photo">
         <p><strong>👤 Name:</strong> Hema A</p>
         <p><strong>📞 Contact:</strong> 9482152759</p>
         <p><strong>📍 Location:</strong> Yelahanka, Bangalore Urban, Karnataka</p>
@@ -218,4 +225,5 @@
     </footer>
 </body>
 </html>
+
 
