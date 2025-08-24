@@ -7,78 +7,68 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fafafa;
-      color: #333;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;
+        color: #333;
     }
     header {
-      background-color: #C8A2C8; /* lilac */
-      color: white;
-      padding: 1rem 0;
-      text-align: center;
+        background-color: #C8A2C8; /* changed to lilac */
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
     }
     nav {
-      text-align: center;
-      padding: 1rem 0;
-      background-color: #333;
-      color: white;
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #333;
+        color: white;
     }
     nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #C8A2C8;
-      text-decoration: underline;
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: bold;
     }
     section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
     }
     footer {
-      background-color: #C8A2C8;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
+        background-color: #C8A2C8; /* changed to lilac */
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
     }
     .projects ul, .skills ul, .Certificates ul, .contact ul, .education ul, .awards ul, .experience ul {
-      list-style-type: none;
-      padding: 0;
+        list-style-type: none;
+        padding: 0;
     }
-    .projects li, .skills ul li, .Certificates li, .contact li, .education li, .awards li, .experience li {
-      background-color: white;
-      margin: 1rem 0;
-      padding: 1.2rem;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease;
-    }
-    .projects li:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    .projects li, .skills li, .Certificates li, .contact li, .education li, .awards li, .experience li {
+        background-color: white;
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
     }
     img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1rem auto;
-      border-radius: 0;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+        border-radius: 0; /* default rectangle shape for all images */
     }
     .profile-photo {
-      border-radius: 50%;
-      width: 200px;
-      height: auto;
-      display: block;
-      margin: 1rem auto;
-    }
-  </style>
+    border-radius: 50% / 35%; /* oval shape for profile photo */
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border: 4px solid #C8A2C8; /* lilac border */
+   }
+</style>
 </head>
 <body>
     <header>
@@ -256,8 +246,6 @@
     </footer>
 </body>
 </html>
-
-
 
 
 
