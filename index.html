@@ -1,321 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hema A - Portfolio</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hema A - Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fafafa;
-      color: #333;
-      line-height: 1.6;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;
+        color: #333;
     }
-
     header {
-      background-color: #C8A2C8;
-      color: white;
-      padding: 1.5rem 0;
-      text-align: center;
-      font-size: 1.5rem;
+        background-color: #C8A2C8; /* changed to lilac */
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
     }
-
     nav {
-      text-align: center;
-      padding: 1rem 0;
-      background-color: #333;
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #333;
+        color: white;
     }
-
     nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
+        color: white;
+        margin: 0 1rem;
+        text-decoration: none;
+        font-weight: bold;
     }
-
-    nav a:hover {
-      color: #C8A2C8;
-    }
-
     section {
-      padding: 2rem;
-      max-width: 1100px;
-      margin: auto;
+        padding: 2rem;
+        max-width: 900px;
+        margin: auto;
     }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #333;
-      border-bottom: 3px solid #C8A2C8;
-      display: inline-block;
-      padding-bottom: 0.5rem;
-    }
-
     footer {
-      background-color: #C8A2C8;
-      color: white;
-      text-align: center;
-      padding: 1rem 0;
-      margin-top: 2rem;
+        background-color: #C8A2C8; /* changed to lilac */
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
     }
-
-    /* Cards layout */
-    .card {
-      background-color: white;
-      margin: 1rem 0;
-      padding: 1.5rem;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .projects ul, .skills ul, .Certificates ul, .contact ul, .education ul, .awards ul, .experience ul {
+        list-style-type: none;
+        padding: 0;
     }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    .projects li, .skills li, .Certificates li, .contact li, .education li, .awards li, .experience li {
+        background-color: white;
+        margin: 1rem 0;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
     }
-
-    .projects ul, 
-    .skills ul, 
-    .Certificates ul, 
-    .contact ul, 
-    .education ul, 
-    .awards ul, 
-    .experience ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .projects li, 
-    .skills li, 
-    .Certificates li, 
-    .contact li, 
-    .education li, 
-    .awards li, 
-    .experience li {
-      margin: 0.5rem 0;
-    }
-
     img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0.75rem auto;
-      border-radius: 5px;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+        border-radius: 0; /* default rectangle shape for all images */
     }
-
     .profile-photo {
-      border-radius: 50% / 35%;
-      width: 180px;
-      height: auto;
-      display: block;
-      margin: 1rem auto;
-      border: 4px solid #C8A2C8;
+        border-radius: 50% / 35%; /* oval shape for profile photo */
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
     }
 
-    /* Skills two-column layout */
-    .skills ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 0.5rem 1rem;
+    /* 🎓 Certificate images style */
+    .Certificates img {
+        width: 300px;     /* fixed width */
+        height: auto;     /* keep aspect ratio */
+        border: 2px solid #555;  /* border color */
+        border-radius: 8px;      /* rounded edges */
+        margin: 0.5rem auto;     /* spacing */
+        display: block;
     }
-
-    /* Certificates grid */
-    .Certificates ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-
-    /* Project images in grid */
-    .projects img {
-      border: 1px solid #ddd;
-    }
-
-    .projects ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .projects li {
-      border: none;
-    }
-
-    .projects .card img {
-      border-radius: 8px;
-    }
-
-    /* Contact links */
-    .contact a {
-      color: #333;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      color: #C8A2C8;
-    }
-  </style>
+</style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-  </header>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
 
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#awards">Awards</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="photo.jpg" alt="Hema A - Profile Photo" class="profile-photo">
-    <p><strong>👤 Name:</strong> Hema A</p>
-    <p><strong>📞 Contact:</strong> 9482152759</p>
-    <p><strong>📍 Location:</strong> Yelahanka, Bangalore Urban, Karnataka</p>
-    <p><strong>🗣️ Languages Known:</strong> English, Kannada, Hindi</p>
-    <p>I am a Computer Science student pursuing a Bachelor’s degree in Computer Science and Mathematics. My strong academic foundation enables me to solve problems effectively, develop efficient solutions, and apply analytical thinking to real-world challenges.</p>
-    <p>I am a quick learner with a growth mindset, adaptable to new technologies, and eager to take on challenging projects. With a balance of technical expertise and interest in management, I bring both problem-solving skills and collaborative spirit to every opportunity.</p>
-  </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="photo.jpg" alt="Hema A - Profile Photo" class="profile-photo">
+        <p><strong>👤 Name:</strong> Hema A</p>
+        <p><strong>📞 Contact:</strong> 9482152759</p>
+        <p><strong>📍 Location:</strong> Yelahanka, Bangalore Urban, Karnataka</p>
+        <p><strong>♀️ Gender:</strong> Female</p>
+        <p><strong>🎂 Date of Birth:</strong> 15-05-2005</p>
+        <p><strong>🗣️ Languages Known:</strong> English, Kannada, Hindi</p>
+        <p>I am a Computer Science student pursuing a Bachelor’s degree in Computer Science and Mathematics. My strong academic foundation enables me to solve problems effectively, develop efficient solutions, and apply analytical thinking to real-world challenges.</p>
+        <p>I am a quick learner with a growth mindset, adaptable to new technologies, and eager to take on challenging projects. With a balance of technical expertise and interest in management, I bring both problem-solving skills and collaborative spirit to every opportunity.</p>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div class="education card">
-      <ul>
-        <li><strong>Bachelor:</strong> Computer Science and Mathematics, Seshadripuram First Grade College</li>
-        <li><strong>Class 12th:</strong> PCMC, Seshadripuram PU College</li>
-        <li><strong>Class 10th:</strong> Scored 88%</li>
-      </ul>
-    </div>
-  </section>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education">
+            <ul>
+                <li>Bachelor of Computer Science and Mathematics, Seshadripuram First Grade College, Yelahanka</li>
+                <li>Class 12th (PCMC), Seshadripuram Pre-University College, Yelahanka</li>
+                <li>Class 10th: Scored 88%</li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills card">
-      <h3>Technical Skills</h3>
-      <ul>
-        <li><strong>Languages:</strong> Python, Java, C, Flutter, Dart, JavaScript, SQL, HTML, CSS</li>
-        <li><strong>Data & Analytics:</strong> Data Visualization, Data Analytics, Power BI</li>
-        <li><strong>Web Development:</strong> Flask, Streamlit, REST APIs, JWT Authentication</li>
-        <li><strong>Mobile Development:</strong> Flutter, Dart</li>
-        <li><strong>Databases:</strong> MongoDB, PyMongo</li>
-        <li><strong>Other Tools:</strong> GitHub, MS Office</li>
-      </ul>
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Communication</li>
-        <li>Teamwork</li>
-        <li>Positive Attitude</li>
-        <li>Time Management</li>
-        <li>Attention to Detail</li>
-        <li>Problem Solving</li>
-        <li>Critical Thinking</li>
-        <li>Organization</li>
-      </ul>
-    </div>
-  </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Languages:</strong> Python, Java, C, Flutter, Dart, JavaScript, SQL, HTML, CSS</li>
+                <li><strong>Data & Analytics:</strong> Data Visualization, Data Analytics, Power BI</li>
+                <li><strong>Web Development:</strong> Flask, Streamlit, REST APIs, JWT Authentication</li>
+                <li><strong>Mobile Development:</strong> Flutter, Dart</li>
+                <li><strong>Databases:</strong> MongoDB, PyMongo</li>
+                <li><strong>Other Tools:</strong> GitHub, MS Office</li>
+            </ul>
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Positive Attitude</li>
+                <li>Time Management</li>
+                <li>Attention to Detail</li>
+                <li>Problem Solving</li>
+                <li>Critical Thinking</li>
+                <li>Organization</li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="Certificates">
-    <h2>Certificates</h2>
-    <div class="Certificates">
-      <ul>
-        <li class="card">Generative AI by GUVI <img src="certificate_genai.jpg" alt="Generative AI Certificate"></li>
-        <li class="card">Python by GUVI <img src="certificate_python.jpg" alt="Python Certificate"></li>
-        <li class="card">SQL by HackerRank <img src="certificate_SQL.jpg" alt="SQL Certificate"></li>
-        <li class="card">JavaScript by HackerRank <img src="certificate_JavaScript.jpg" alt="JavaScript Certificate"></li>
-      </ul>
-    </div>
-  </section>
+    <section id="Certificates">
+        <h2>Certificates</h2>
+        <div class="Certificates">
+            <ul>
+                <li>Generative AI by GUVI</li>
+                <img src="certificate_genai.jpg" alt="Generative AI Certificate from GUVI">
+                <li>Python by GUVI</li>
+                <img src="certificate_python.jpg" alt="Python Certificate from GUVI">
+                <li>SQL by HackerRank</li>
+                <img src="certificate_SQL.jpg" alt="SQL Certificate from HackerRank">
+                <li>JavaScript by HackerRank</li>
+                <img src="certificate_JavaScript.jpg" alt="JavaScript Certificate from HackerRank">
+            </ul>
+        </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <ul>
-        <li class="card">
-          <strong>Simple Calculator (C)</strong>
-          <p>Built a user-friendly calculator in C to perform arithmetic operations.</p>
-          <p><a href="https://github.com/Hema-A-05/Simple-Calculator" target="_blank">View Project on GitHub</a></p>
-          <img src="calculator.png" alt="Calculator Project">
-        </li>
-        <li class="card">
-          <strong>Personal Expenses Tracker (Python)</strong>
-          <p>Developed a tracker to manage daily expenses effectively.</p>
-          <p><a href="https://github.com/Hema-A-05/Personal-expense-tracker" target="_blank">View Project on GitHub</a></p>
-          <img src="tracker.jpg" alt="Expenses Tracker">
-        </li>
-        <li class="card">
-          <strong>Catch the Ball Game (HTML, CSS, JavaScript)</strong>
-          <p>Interactive game where players catch falling balls.</p>
-          <p><a href="https://github.com/Hema-A-05/Catch-the-Ball-game" target="_blank">View Project on GitHub</a></p>
-          <img src="game.png" alt="Catch the Ball Game">
-        </li>
-        <li class="card">
-          <strong>Customer Churn Prediction (Python)</strong>
-          <p>Analyzed customer data to predict churn with data visualizations.</p>
-          <p><a href="https://github.com/Hema-A-05/Customer-Churn-Prediction" target="_blank">View Project on GitHub</a></p>
-          <img src="churn.png" alt="Churn Prediction Overview">
-        </li>
-        <li class="card">
-          <strong>Reminder Application (Flutter)</strong>
-          <p>Task reminder app with alerts and cross-platform support.</p>
-          <p><a href="https://github.com/Hema-A-05/Reminder-Application" target="_blank">View Project on GitHub</a></p>
-          <img src="Reminder App.png" alt="Reminder App">
-        </li>
-        <li class="card">
-          <strong>Agent Management System (Full-Stack)</strong>
-          <p>Flask backend + Streamlit frontend with JWT authentication and task allocation.</p>
-          <p><a href="https://github.com/Hema-A-05/MERN_flasklite" target="_blank">View Project on GitHub</a></p>
-          <img src="Agent App.png" alt="Agent System">
-        </li>
-      </ul>
-    </div>
-  </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <ul>
+                 <li>
+                    <strong>Simple Calculator (C) </strong>
+                    <p>Built a user-friendly calculator using C to perform arithmetic operations, showcasing proficiency in C programming.</p>
+                    <p><a href="https://github.com/Hema-A-05/Simple-Calculator" target="_blank">View Project on GitHub</a></p>
+                    <img src="calculator.png" alt="Screenshot of Simple Calculator">
+                </li>
+                <li>
+                    <strong>Personal Expenses Tracker (Python) </strong>
+                    <p>Developed a personal expenses tracker using Python to help users manage their daily expenses effectively.</p>
+                    <p><a href="https://github.com/Hema-A-05/Personal-expense-tracker" target="_blank">View Project on GitHub</a></p>
+                    <img src="tracker.jpg" alt="Screenshot of Personal Expenses Tracker">
+                </li>
+                <li>
+                    <strong>Catch the Ball Game (HTML, CSS, JavaScript) </strong>
+                    <p>Created an interactive game where players control a basket to catch falling balls, demonstrating front-end development skills.</p>
+                    <p><a href="https://github.com/Hema-A-05/Catch-the-Ball-game" target="_blank">View Project on GitHub</a></p>
+                    <img src="game.png" alt="Catch the Ball Game UI">
+                    <img src="game web pic.png" alt="Catch the Ball Game - Web Interface">
+                </li>
+                <li>
+                    <strong>Customer Churn Prediction (Python) </strong>
+                    <p>Analyzed customer data to predict churn, helping businesses retain clients through actionable insights and data visualizations.</p>
+                    <p><a href="https://github.com/Hema-A-05/Customer-Churn-Prediction" target="_blank">View Project on GitHub</a></p>
+                    <img src="churn.png" alt="Customer Churn Prediction Overview">
+                    <img src="churn_OP.png" alt="Churn Prediction Output">
+                    <img src="Chart1.png" alt="Churn Data Chart 1">
+                    <img src="Chart2.png" alt="Churn Data Chart 2">
+                    <img src="Chart3.png" alt="Churn Data Chart 3">
+                </li>
+                <li>
+                    <strong>Reminder Application (Flutter) </strong>
+                    <p>A Flutter-based reminder app designed to help users manage tasks efficiently with smart alerts, customizable schedules, and seamless cross-platform performance on Android and iOS.</p>
+                    <p><a href="https://github.com/Hema-A-05/Reminder-Application" target="_blank">View Project on GitHub</a></p>
+                    <img src="Reminder App.png" alt="Reminder Application Overview">
+                    <img src="Clock 1.png" alt="Output 1">
+                    <img src="Clock 2.png" alt="Output 2">
+                    <img src="Clock 3.png" alt="Output 3">
+                </li>
+                <li>
+                    <strong>Agent Management System  (Full-Stack Application) </strong>
+                    <p>Developed a secure Agent Management System using a Python Flask backend and a Streamlit frontend. The system streamlines administrative tasks with JWT authentication and a module for equitably distributing tasks from uploaded CSV/XLSX files.</p>
+                    <p><a href="https://github.com/Hema-A-05/MERN_flasklite" target="_blank">View Project on GitHub</a></p>
+                    <img src="Agent App.png" alt="Application Overview">
+                    <img src="Photo 1.png" alt="Output 1">
+                    <img src="Photo 2.png" alt="Output 2">
+                    <img src="Photo 3.png" alt="Output 3">
+                </li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="experience">
-    <h2>Internship</h2>
-    <div class="experience card">
-      <strong>Data Analytics Internship – Reaching Hand</strong>
-      <p>Worked on data visualization, trend analysis, and delivering insights from real-world data.</p>
-      <img src="Int_cert.jpg" alt="Internship Certificate">
-    </div>
-  </section>
+    <section id="experience">
+        <h2>Internship</h2>
+        <div class="experience">
+            <ul>
+                <li>
+                    <strong>Data Analytics Internship – Reaching Hand</strong>
+                    <p>Gained practical experience in data visualization, trend analysis, and strategic insights while contributing to impactful projects using real-world data.</p>
+                    <img src="Course.jpg" alt="Course Certificate">
+                    <img src="Int_cert.jpg" alt="Internship Certificate from Reaching Hand">
+                </li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="awards">
-    <h2>Awards</h2>
-    <div class="awards card">
-      <ul>
-        <li>Brian O' Thon Quiz Competition</li>
-        <li>Yoga Competition</li>
-      </ul>
-    </div>
-  </section>
+    <section id="awards">
+        <h2>Awards</h2>
+        <div class="awards">
+            <ul>
+                <li>Brian O' Thon Quiz Competition</li>
+                <li>Yoga Competition</li>
+            </ul>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>📍 Contact</h2>
-    <div class="contact card">
-      <ul>
-        <li><strong>📧 Email:</strong> <a href="mailto:ahema6455@gmail.com">ahema6455@gmail.com</a></li>
-        <li><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/hema-a-a69610335" target="_blank">hema-a-a69610335</a></li>
-        <li><strong>💻 GitHub:</strong> <a href="https://github.com/Hema-A-05" target="_blank">Hema-A-05</a></li>
-      </ul>
-    </div>
-  </section>
+    <section id="contact">
+        <h2>📍 Contact</h2>
+        <div class="contact">
+            <ul>
+                <li><strong>🔗 Email:</strong> <a href="mailto:ahema6455@gmail.com">ahema6455@gmail.com</a></li>
+                <li><strong>🔗 LinkedIn:</strong> <a href="https://www.linkedin.com/in/hema-a-a69610335" target="_blank">hema-a-a69610335</a></li>
+                <li><strong>🔗 GitHub:</strong> <a href="https://github.com/Hema-A-05" target="_blank">Hema-A-05</a></li>
+            </ul>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Hema A. All rights reserved. | <a href="#about" style="color:white;">⬆️ Back to Top</a></p>
-  </footer>
+    <footer>
+        <p>© 2024 Hema A. All rights reserved. | <a href="#about">⬆️ Back to Top</a></p>
+    </footer>
 </body>
 </html>
+
+
 
 
 
